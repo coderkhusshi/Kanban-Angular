@@ -1,0 +1,98 @@
+
+
+
+ *{
+    padding:0%;
+    margin:0%;
+    box-sizing :border-box;
+    font-family: sans-serif;
+
+}
+
+
+.slides-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slides{
+    width: 500%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.nevigation-manual{
+position: absolute;
+width: 100%;
+margin-top:-40px;
+display: flex;
+justify-content: center;
+}
+.manual-btn{
+border: 2px solid #22E517;
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background: #22E517;
+}
+#radio1:checked~ .first{
+    margin-left: 0;
+}
+#radio2:checked~ .first{
+    margin-left: -20%;
+}
+#radio3:checked~ .first{
+    margin-left: -40%;
+}
+
+#connection {
+    display: grid;
+    place-items: center;
+    min-height: 20vh;
+    width: 20;
+    background: rgb(151, 48, 211);
+    overflow: hidden;
+} 
+ #measures.box-container .box button{
+    border-width: 75%;
+
+ }
+ .boxer{
+    height: 50%;
+ }
+ .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .navbar{
+    margin-bottom: 0%;
+  }
+  .nav-link{
+      background-color: transparent;
+      border: transparent;
+  }

@@ -1,0 +1,46 @@
+<div class="head">
+    <!--&nbsp;&nbsp;&nbsp; Customer Login-->
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <div class="body1">
+                <img src="../../../assets/login.png" style="height:490px; width: 500px;">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="image">
+                <img src="../../../assets/avatar-3814081_640.png" style="height:110px; width: 110px;"
+                    class="rounded-pill">
+            </div>
+
+<h1 style="color:blue,"><u>User Login</u> </h1>
+
+<br>
+<br>
+<br>
+    <form (ngSubmit)="validateCustomer()">
+        <div class="mb-3">
+            <i class="fas fa-user"></i>
+
+        <label for="exampleFormControlInput1" class="form-label">User-Name</label>
+    <input type="text" placeholder="User Name"[(ngModel)]="cust.username" class="form-control" id="username"name="username" >
+    </div>
+<br>
+    <div class="mb-3">
+        <i class="fas fa-lock"></i>
+        
+        <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <input type="password"placeholder="Password"[(ngModel)]="cust.password" class="form-control" id="password"name="password" >
+    
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+
+    <hr>
+    Not a member? <a href="customer/registration">Signup now</a>
+    <br><br>
+    </form>
+</div>

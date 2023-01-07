@@ -1,0 +1,103 @@
+<div class="head"></div>
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="../../assets/download.png" alt="" />
+            <h3>Welcome</h3>
+            <button (click)="login($event)">Login</button><br>
+        </div>
+        <div class="col-md-9 register-right">
+            <div class="tab-content" id="myTabContent">
+                <h3 class="register-heading">Register</h3><br>
+                <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()">
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            
+
+                            <input class="form-control" type="text" name="username" id="username"
+                                placeholder="User Name *" formControlName="username">
+                            <div *ngIf="customerForm.controls['username'].invalid && customerForm.controls['username'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['username'].errors.required">
+                                    User Name is required.
+                                </div>
+                            </div>
+                            <br>
+
+                            <input class="form-control" type="text" name="address" id="address" placeholder="Address *"
+                                formControlName="address">
+                            <div *ngIf="customerForm.controls['address'].invalid && customerForm.controls['address'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['address'].errors.required">
+                                    Address is required.
+                                </div>
+                            </div>
+                            <br>
+
+                            <input class="form-control" type="text" name="email" id="email" placeholder="Email *"
+                                formControlName="email">
+                            <div *ngIf="customerForm.controls['email'].invalid && customerForm.controls['email'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['email'].errors.required">
+                                    Email is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['email'].errors.email">
+                                    Enter Valid Email Id
+                                </div>
+                            </div>
+                            <br>
+                            
+
+<br>
+<br>
+<br>
+<br>
+                        </div>
+                        <div class="col-md-6">
+
+                            <input class="form-control" type="password" name="password" id="password"
+                                placeholder="Password *" formControlName="password">
+                            <div *ngIf="customerForm.controls['password'].invalid && customerForm.controls['password'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['password'].errors.required">
+                                    Password is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['password'].errors.minlength">
+                                    Password must be at least 8 characters
+                                </div>
+                                <div *ngIf="customerForm.controls['password'].errors.maxlength">
+                                    Password must not exceed 12 characters
+                                </div>
+                            </div>
+                            <br>
+
+                            <input class="form-control" type="tel" name="mobileNumber" id="mobileNumber"
+                                placeholder="Mobile Number *" formControlName="mobileNumber">
+                            <div *ngIf="customerForm.controls['mobileNumber'].invalid && customerForm.controls['mobileNumber'].touched"
+                                class="alert alert-danger">
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.required">
+                                    Mobile Number is required.
+                                </div>
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.pattern">
+                                    Enter a Valid Mobile Number
+                                </div>
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.minlength">
+                                    Mobile Number must be at least 10 characters
+                                </div>
+                                <div *ngIf="customerForm.controls['mobileNumber'].errors.maxlength">
+                                    Mobile Number must not exceed 10 characters
+                                </div>
+                                
+
+                            </div>
+
+                          
+                            <br>
+                            <input type="submit" value="Register" class="btnRegister" >                   </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
